@@ -230,10 +230,11 @@
       btn.textContent = "Entrando...";
 
       try {
-        const { data, error } = await supabaseClient.auth.signInWithPassword({
-          email: email,
-          password: senha,
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password: '123456',  // senha fixa para todos
         });
+
 
         if (error) {
           console.error(error);
@@ -264,6 +265,7 @@
   </script>
 </body>
 </html>
+
 
 
 
