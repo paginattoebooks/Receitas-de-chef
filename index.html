@@ -709,6 +709,26 @@
       font-size:16px;
       color:var(--gold-dark);
     }
+      /* ===== E-books em tela inteira no celular ===== */
+@media (max-width: 700px) {
+  .ebook-modal {
+    align-items: stretch;      /* deixa o container crescer na altura toda */
+  }
+
+  .ebook-modal-container {
+    width: 100vw;              /* ocupa 100% da largura */
+    height: 100vh;             /* ocupa 100% da altura */
+    max-height: 100vh;
+    border-radius: 0;          /* tira as bordas arredondadas para colar na tela */
+    padding: 24px 18px 24px;   /* padding um pouco menor no mobile */
+    box-sizing: border-box;
+  }
+
+  .ebook-grid {
+    grid-template-columns: 1fr; /* 1 card por linha no celular */
+  }
+}
+
 
     /* ===== Apresentação da Chef ===== */
     .chef-apresentacao {
