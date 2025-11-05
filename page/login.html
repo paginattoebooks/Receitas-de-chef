@@ -120,6 +120,17 @@
         msg.textContent = "✅ Login realizado com sucesso!";
         msg.className = "success";
 
+        // Exemplo: depois que validar no Supabase e o login estiver OK
+       if (data && data.length === 1) {
+         // guarda o e-mail do usuário como "sessão"
+          localStorage.setItem('chef_user_email', email.toLowerCase());
+
+        // manda para a área de membros
+         window.location.href = '/index.html';  // ajuste o nome se sua página principal for outro
+          } else {
+            alert('E-mail ou senha inválidos');
+           }
+
         // Salva sessão local (se quiser)
         localStorage.setItem("session", JSON.stringify(data.session));
 
@@ -132,3 +143,4 @@
   </script>
 </body>
 </html>
+
