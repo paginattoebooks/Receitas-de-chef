@@ -239,18 +239,23 @@
       margin-right:auto;
     }
 
-     .categorias-grid{
-       display:grid;
-       grid-template-columns:repeat(2, minmax(0, 1fr)); /* 2 colunas em qualquer largura */
-       gap:26px;
-      }
+     .categorias-grid {
+       display: grid;
+       grid-template-columns: 1fr; /* 1 coluna padrão */
+       gap: 26px;
+}
 
-      /* mantém o desktop com 3 colunas */
-       @media(min-width:1024px){
-     .categorias-grid{
-      grid-template-columns:repeat(3, 1fr);
-     }
-   }
+    @media (min-width: 700px) {
+     .categorias-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+  }
+
+    @media (min-width: 1024px) {
+     .categorias-grid {
+       grid-template-columns: repeat(3, 1fr); /* 3 colunas em desktop */
+    }
+  }
 
     .categoria-card{
       background:linear-gradient(135deg,#FFEFD5 0%,#FFE4B5 100%);
@@ -365,17 +370,23 @@
       transform:translateX(-3px);
     }
 
-    .receitas-grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr)); /* 2 colunas padrão */
-      gap:24px;
-     }
+    .receitas-grid {
+     display: grid;
+     grid-template-columns: 1fr; /* 1 coluna padrão */
+     gap: 24px;
+   }
 
-  @media(min-width:1024px){
-    .receitas-grid{
-     grid-template-columns:repeat(3, 1fr); /* desktop continua igual */
+    @media (min-width: 700px) {
+     .receitas-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
-  }
+   }
+
+    @media (min-width: 1024px) {
+     .receitas-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+   }
     .receita-card{
       background:#fff;
       border-radius:16px;
